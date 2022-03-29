@@ -5,7 +5,7 @@ async function getCars() {
   result.data.forEach((car) => {
     const li = document.createElement("tr");
     li.innerHTML = `
-    <td>${car.model}</td>
+    <td>${car.make}</td>
     <td>${car.model}</td>
     <td>${car.color}</td>
     `;
