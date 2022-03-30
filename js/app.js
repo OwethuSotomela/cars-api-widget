@@ -1,4 +1,6 @@
 let carsElements = document.querySelector(".cars");
+let getMake = document.getElementById("carMake").value;
+let getColor = document.getElementById("carColor").value;
 
 let displaySelectedCar = document.querySelector(".displaySelectedCar");
 let submitBtn = document.querySelector(".submitBtn");
@@ -32,7 +34,6 @@ async function getSelectedCars() {
     "http://api-tutor.herokuapp.com/v1/cars"
   );
   data = result.data;
-  console.log(data);
   data = data.filter((car) => {
     return car.make == getMake && car.color == getColor;
   });
