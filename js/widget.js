@@ -5,7 +5,8 @@ let submitBtn = document.querySelector(".submitBtn");
 
 let colorTemplateSource = document.querySelector(".carColorTemplate").innerText;
 let makeTemplateSource = document.querySelector(".carMakeTemplate").innerText;
-let carDataTemplateSource = document.querySelector(".carDataTemplate").innerText
+let carDataTemplateSource =
+  document.querySelector(".carDataTemplate").innerText;
 
 let carColorTemplate = Handlebars.compile(colorTemplateSource);
 let carMakeTemplate = Handlebars.compile(makeTemplateSource);
