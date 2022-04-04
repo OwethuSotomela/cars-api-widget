@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car-Widget-Api</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"
-      integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
-      integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 
-    <script type="template" class="carMakeTemplate">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car-Widget-Api</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"
+    integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
+    integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+  <script type="template" class="carMakeTemplate">
       {{#each carMake}}
           <option value="{{this}}">{{this}}</option>
       {{/each}}
     </script>
 
-    <script type="template" class="carColorTemplate">
+  <script type="template" class="carColorTemplate">
       {{#each carColor}}
             <option value="{{this}}">{{this}}</option>
       {{/each}}
     </script>
 
-    <script type="template" class="carDataTemplate">
+  <script type="template" class="carDataTemplate">
       <tr>
         <th>Make</th>
         <th>Model</th>
         <th>Color</th>
+        <th>Price</th>
+        <th>Reg-Number</th>
       </tr>
 
         {{#each selectedCars}}
@@ -42,46 +39,39 @@
           <td>{{this.make}}</td>
           <td>{{this.model}}</td>
           <td>{{this.color}}</td>
+          <td>{{this.price}}</td>
+          <td>{{this.reg_number}}</td>
         </tr>
         {{/each}}
     </script>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>Car-API-Widget</h1>
-        </div>
-        <div class="col-12">
-          <label for="cars">Select make:</label>
-          <select
-            name="cars"
-            class="carMake"
-            id="carMake"
-            onchange="getSelectedCars()"
-          ></select>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Car-API-Widget</h1>
+      </div>
+      <div class="col-12">
+        <label for="cars">Select make:</label>
+        <select name="cars" class="carMake" id="carMake" onchange="getSelectedCars()"></select>
 
-          <label for="cars">Select color:</label>
-          <select
-            name="Colors"
-            class="carColor"
-            id="carColor"
-            onchange="getSelectedCars()"
-          ></select>
+        <label for="cars">Select color:</label>
+        <select name="Colors" class="carColor" id="carColor" onchange="getSelectedCars()"></select>
 
-          <br /><br />
-          <input type="button" class="submitBtn" value="Submit" />
-        </div>
-        <div class="col-12">
-          <table class="selectedCars"></table>
-        </div>
-        <div class="col-12">
-          <a href="../index.html"><em>Home</em></a>
-          <a href="../html/api.html"><em>API</em></a>
-        </div>
+        <br /><br />
+        <input type="button" class="submitBtn" value="Submit" />
+      </div>
+      <div class="col-12">
+        <table class="selectedCars"></table>
+      </div>
+      <div class="col-12">
+        <a href="../index.html"><em>Home</em></a>
+        <a href="../html/api.html"><em>API</em></a>
       </div>
     </div>
-    <script src="../js/widget.js"></script>
-  </body>
+  </div>
+  <script src="../js/widget.js"></script>
+</body>
+
 </html>
