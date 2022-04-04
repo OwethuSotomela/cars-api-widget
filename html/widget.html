@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Car-Widget-Api</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"
     integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
@@ -44,24 +44,28 @@
 
 <body>
   <div class="container">
-    <h1>Car-API-Widget</h1>
+    <div class="row">
+      <div class="col-12">
+        <h1>Car-API-Widget</h1>
+      </div>
+      <div class="col-12">
+        <label for="cars">Select make:</label>
+        <select name="cars" class="carMake" id="carMake" onchange="getSelectedCars()"></select>
 
-    <div class="dropdown">
-      <label for="cars">Select make:</label>
-      <select name="cars" class="carMake" id="carMake" onchange="getSelectedCars()"></select>
+        <label for="cars">Select color:</label>
+        <select name="Colors" class="carColor" id="carColor" onchange="getSelectedCars()"></select>
 
-      <label for="cars">Select color:</label>
-      <select name="Colors" class="carColor" id="carColor" onchange="getSelectedCars()"></select>
-
-      <br /><br />
-      <input type="button" class="submitBtn" value="Submit" />
-
-      <table class="selectedCars"></table>
+        <br /><br />
+        <input type="button" class="submitBtn" value="Submit" />
+      </div>
+      <div class="col-12">
+        <table class="selectedCars"></table>
+      </div>
     </div>
-
   </div>
-  <a href="./index.html"><em>Home</em></a>
-  <script src="./js/widget.js"></script>
+  <a href="../index.html"><em>Home</em></a>
+  <a href="../html/api.html"><em>API</em></a>
+  <script src="../js/widget.js"></script>
 </body>
 
 </html>

@@ -9,6 +9,8 @@ async function getCars() {
     <td>${car.make}</td>
     <td>${car.model}</td>
     <td>${car.color}</td>
+    <td>${car.price}</td>
+    <td>${car.reg_number}</td>
     `;
     carsElements.appendChild(li);
   });
